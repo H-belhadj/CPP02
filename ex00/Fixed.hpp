@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 12:31:03 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/21 12:34:53 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/21 12:36:22 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,5 @@ class Fixed
         int getRawBits( void ) const;
         void setRawBits( int const raw );
 };
+
+#endif
