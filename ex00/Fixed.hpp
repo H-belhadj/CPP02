@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 12:31:03 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/21 12:36:22 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/22 18:56:59 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class Fixed
         static const int bits = 8;    
     public:
         Fixed();
+        Fixed(const Fixed &other);
+        Fixed& operator=(const Fixed& other);
         ~Fixed();
         int getRawBits( void ) const;
         void setRawBits( int const raw );
