@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 19:18:59 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/22 19:32:55 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/22 19:36:46 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ private:
 public:
     Fixed();
     ~Fixed();
+
+    float   toFloat( void ) const;
+    int     toInt( void ) const;
 };
 
 #endif
