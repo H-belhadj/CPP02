@@ -6,11 +6,13 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 19:19:02 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/22 19:19:44 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/24 15:24:24 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "Fixed.hpp"
+
 int main( void )
 {
     Fixed a;
