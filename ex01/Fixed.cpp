@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 19:18:56 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/24 21:59:27 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/24 23:46:55 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,10 @@ float Fixed::toFloat(void) const
 int Fixed::toInt(void) const
 {
     return (value >> bits);
+}
+
+std::ostream& operator<<(std::ostream& COUT, Fixed const &i)
+{
+	COUT << i.toFloat();
+	return (COUT);
 }
