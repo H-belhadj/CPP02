@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 19:18:56 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/24 19:55:51 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/24 21:59:27 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Fixed::Fixed(const int num)
 Fixed::Fixed(const float nb)
 {
     std::cout << "Float constructor called" << std::endl;
-    value = roundf(nb (1 << bits));
+    value = roundf(nb * (1 << bits));
 }
 Fixed::~Fixed()
 {
