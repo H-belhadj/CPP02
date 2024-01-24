@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 19:18:56 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/24 18:49:20 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/24 19:55:51 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,16 @@ Fixed& Fixed::operator=(const Fixed& other)
     return *this;
 }
 
-Fixed::Fixed(int ref)
+Fixed::Fixed(const int num)
 {
-    (void)ref;
-    this->value *= std::pow(ref, bits); 
-    std::cout << "the value if " << this->value << std::endl;
+    std::cout << "Int constructor called" << std::endl;
+    value = num << bits;
 }
-// Fixed::Fixed(float rif)
-// {
-// }
+Fixed::Fixed(const float nb)
+{
+    std::cout << "Float constructor called" << std::endl;
+    value = roundf(nb (1 << bits));
+}
 Fixed::~Fixed()
 {
     std::cout << "Destructor called" << std::endl;
@@ -56,15 +57,12 @@ void Fixed::setRawBits(int const raw)
 {
     this->value = raw;
 }
-//function toFloat
-float   Fixed::toFloat(void)const
+float Fixed::toFloat(void) const
 {
-    return this->value;   
+    return ((float)value / (1 << bits));
 }
 
-//function toInt
-
-int   Fixed::toInt(void)const
+int Fixed::toInt(void) const
 {
-    return this->value;   
+    return (value >> bits);
 }
