@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 19:18:59 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/24 18:45:23 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/24 20:28:15 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Fixed
     public:
         Fixed();
         Fixed(int ref);
-        // Fixed(float rif);
+        Fixed(float rif);
         Fixed(const Fixed &other);
         Fixed& operator=(const Fixed& other);
         ~Fixed();    
