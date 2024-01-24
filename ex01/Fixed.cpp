@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 19:18:56 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/24 18:08:42 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/24 18:49:20 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,15 @@ Fixed& Fixed::operator=(const Fixed& other)
     return *this;
 }
 
-
+Fixed::Fixed(int ref)
+{
+    (void)ref;
+    this->value *= std::pow(ref, bits); 
+    std::cout << "the value if " << this->value << std::endl;
+}
+// Fixed::Fixed(float rif)
+// {
+// }
 Fixed::~Fixed()
 {
     std::cout << "Destructor called" << std::endl;
@@ -49,5 +57,14 @@ void Fixed::setRawBits(int const raw)
     this->value = raw;
 }
 //function toFloat
+float   Fixed::toFloat(void)const
+{
+    return this->value;   
+}
 
 //function toInt
+
+int   Fixed::toInt(void)const
+{
+    return this->value;   
+}
