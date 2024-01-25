@@ -63,6 +63,13 @@
     "__bit_reference": "cpp",
     "complex": "cpp",
     "iterator": "cpp",
-    "string": "cpp"
+    "string": "cpp",
+    "__locale": "cpp",
+    "bitset": "cpp",
+    "ios": "cpp",
+    "istream": "cpp",
+    "locale": "cpp",
+    "ostream": "cpp",
+    "streambuf": "cpp"
   }
 }

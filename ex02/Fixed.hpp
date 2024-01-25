@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 23:53:51 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/25 17:10:17 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:00:15 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ class Fixed
         Fixed operator--(int);
         //The 4 public overloaded member functions:
         static  Fixed& min(Fixed& x, Fixed& y);
-        static  Fixed& min(const Fixed& x, const Fixed& y);
+        static  const  Fixed& min(const Fixed& x, const Fixed& y);
         static  Fixed& max(Fixed& x, Fixed& y);
-        static  Fixed& max(const Fixed& x, const Fixed& y);
+        static  const Fixed& max(const Fixed& x, const Fixed& y);
 };
 std::ostream& operator<<(std::ostream& COUT, Fixed const &i);
 
