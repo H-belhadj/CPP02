@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 23:53:53 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/25 18:15:49 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:30:23 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 Fixed::Fixed()
 {
-    std::cout << "Default constructor called" << std::endl;
+    // std::cout << "Default constructor called" << std::endl;
     this->value = 0;
 }
 
 Fixed::Fixed(const Fixed &other)
 {
-    std::cout << "copy constructor called" << std::endl;
+    // std::cout << "copy constructor called" << std::endl;
     this->setRawBits(other.getRawBits());
 }
 
 Fixed& Fixed::operator=(const Fixed& other)
 {
-    std::cout << "copy assignment operator called" << std::endl;
+    // std::cout << "copy assignment operator called" << std::endl;
     if(this != &other)
         this->setRawBits(other.getRawBits());
     return *this;
@@ -34,22 +34,22 @@ Fixed& Fixed::operator=(const Fixed& other)
 
 Fixed::Fixed(const int num)
 {
-    std::cout << "Int constructor called" << std::endl;
+    // std::cout << "Int constructor called" << std::endl;
     value = num << bits;
 }
 Fixed::Fixed(const float nb)
 {
-    std::cout << "Float constructor called" << std::endl;
+    // std::cout << "Float constructor called" << std::endl;
     value = roundf(nb * (1 << bits));
 }
 Fixed::~Fixed()
 {
-    std::cout << "Destructor called" << std::endl;
+    // std::cout << "Destructor called" << std::endl;
 }
 
 int Fixed::getRawBits()const
 {
-    std::cout << "getRawBits member function called" << std::endl;
+    // std::cout << "getRawBits member function called" << std::endl;
     return this->value;
 }
 
@@ -105,22 +105,22 @@ bool Fixed::operator>=(const Fixed& other) const
 
 Fixed Fixed::operator+(const Fixed &other) const
 {
-    return(Fixed(this->getRawBits() + other.getRawBits()));
+    return(Fixed(this->toFloat() - other.toFloat()));
 }
 
 Fixed Fixed::operator-(const Fixed &other) const
 {
-    return(Fixed(this->getRawBits() - other.getRawBits()));
+    return(Fixed(this->toFloat() - other.toFloat()));
 }
 
 Fixed Fixed::operator*(const Fixed &other) const
 {
-    return(Fixed(this->getRawBits() * other.getRawBits()));
+    return(Fixed(this->toFloat() * other.toFloat()));
 }
 
 Fixed Fixed::operator/(const Fixed &other) const
 {
-    return(Fixed(this->getRawBits() / other.getRawBits()));
+    return(Fixed(this->toFloat() / other.toFloat()));
 }
 
 Fixed&  Fixed::operator++()
