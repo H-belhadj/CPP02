@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 23:53:51 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/25 18:00:15 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/25 19:01:35 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ class Fixed
         Fixed(const Fixed &other);
         Fixed& operator=(const Fixed& other);
         ~Fixed();    
-        float   toFloat( void ) const;
-        int     toInt( void ) const;
+        float   toFloat( void ) const;//This function converts the fixed-point number to a floating-point representation
+        int     toInt( void ) const;//This function converts the fixed-point number to an integer by right-shifting the value by the number of bits
         int     getRawBits( void ) const;
         void    setRawBits( int const raw );
         //The 6 comparison operators:
