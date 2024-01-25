@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 23:53:51 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/25 17:07:44 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/25 17:10:17 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ class Fixed
         Fixed operator*(const Fixed &other) const;
         Fixed operator/(const Fixed &other) const;
         //The 4 increment/decrement:
-        Fixed& operator++(Fixed& other);
-        Fixed& operator--(Fixed& other);
-        Fixed operator++(Fixed& other, int);
-        Fixed operator--(Fixed& other, int);
+        Fixed& operator++(void);
+        Fixed& operator--(void);
+        Fixed operator++(int);
+        Fixed operator--(int);
         //The 4 public overloaded member functions:
         static  Fixed& min(Fixed& x, Fixed& y);
         static  Fixed& min(const Fixed& x, const Fixed& y);
