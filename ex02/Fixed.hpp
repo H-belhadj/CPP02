@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 23:53:51 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/25 15:07:56 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:30:52 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,20 @@ class Fixed
         int     toInt( void ) const;
         int     getRawBits( void ) const;
         void    setRawBits( int const raw );
+        //The 6 comparison operators:
+        bool operator==(const Fixed& other) const;
+        bool operator!=(const Fixed& other) const;
+        bool operator<(const Fixed& other) const;
+        bool operator>(const Fixed& other) const;	
+        bool operator<=(const Fixed& other) const;
+        bool operator>=(const Fixed& other) const;
+        //The 4 arithmetic operators:
+        Fixed operator+(const Fixed &other) const;
+        Fixed operator-(const Fixed &other) const;
+        Fixed operator*(const Fixed &other) const;
+        Fixed operator/(const Fixed &other) const;
+ 
+
 };
 std::ostream& operator<<(std::ostream& COUT, Fixed const &i);
 

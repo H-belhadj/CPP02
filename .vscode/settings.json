@@ -58,6 +58,11 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "iostream": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "system_error": "cpp",
+    "__bit_reference": "cpp",
+    "complex": "cpp",
+    "iterator": "cpp",
+    "string": "cpp"
   }
 }
