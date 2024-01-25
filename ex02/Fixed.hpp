@@ -6,23 +6,34 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 23:53:51 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/24 23:54:50 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:07:56 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
-# define FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
-#include <cmath>
+#include<cmath>
 
 class Fixed
 {
-private:
-    /* data */
-public:
-    Fixed(/* args */);
-    ~Fixed();
+    private:
+        int value;
+        static const int bits = 8;
+    
+    public:
+        Fixed();
+        Fixed(int ref);
+        Fixed(float rif);
+        Fixed(const Fixed &other);
+        Fixed& operator=(const Fixed& other);
+        ~Fixed();    
+        float   toFloat( void ) const;
+        int     toInt( void ) const;
+        int     getRawBits( void ) const;
+        void    setRawBits( int const raw );
 };
+std::ostream& operator<<(std::ostream& COUT, Fixed const &i);
 
 #endif

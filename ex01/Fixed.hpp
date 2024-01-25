@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 19:18:59 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/24 23:46:47 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:07:44 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ class Fixed
         void    setRawBits( int const raw );
 };
 std::ostream& operator<<(std::ostream& COUT, Fixed const &i);
-#endif
 
+#endif
