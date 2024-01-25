@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 23:53:53 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/25 15:05:03 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/25 17:17:42 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,34 @@ std::ostream& operator<<(std::ostream& COUT, Fixed const &i)
 {
 	COUT << i.toFloat();
 	return (COUT);
+}
+
+bool Fixed::operator==(const Fixed& other) const
+{
+    return (this->getRawBits() == other.getRawBits());
+}
+
+bool Fixed::operator!=(const Fixed& other) const
+{
+    return (this->getRawBits() != other.getRawBits());
+}
+
+bool Fixed::operator<(const Fixed& other) const
+{
+    return (this->getRawBits() < other.getRawBits());
+}
+
+bool Fixed::operator>(const Fixed& other) const
+{
+    return (this->getRawBits() < other.getRawBits());
+}	
+
+bool Fixed::operator<=(const Fixed& other) const
+{
+    return (this->getRawBits() <= other.getRawBits());
+}
+
+bool Fixed::operator>=(const Fixed& other) const
+{
+    return (this->getRawBits() >= other.getRawBits());
 }
