@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 19:18:56 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/01/24 23:46:55 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/01/26 10:58:15 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Fixed::Fixed(const int num)
 Fixed::Fixed(const float nb)
 {
     std::cout << "Float constructor called" << std::endl;
-    value = roundf(nb * (1 << bits));
+    value = roundf(nb*(1 << bits));
 }
 Fixed::~Fixed()
 {
@@ -49,7 +49,7 @@ Fixed::~Fixed()
 
 int Fixed::getRawBits()const
 {
-    std::cout << "getRawBits member function called" << std::endl;
+    // std::cout << "getRawBits member function called" << std::endl;
     return this->value;
 }
 
